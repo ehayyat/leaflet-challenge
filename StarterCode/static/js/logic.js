@@ -84,7 +84,7 @@ d3.json(url).then(function(data) {
 
 
   var legend = L.control({
-    position: "bottomright"
+    position: "topright"
   });
   legend.onAdd = function() {
     var div = L.DomUtil.create("div", "legend");
@@ -98,55 +98,8 @@ d3.json(url).then(function(data) {
       "purple"
     ];
 
-  // for (var i= 0; i<firstkey; i++) {
-  //   div.innterHTML +=
-  // }
+
     return div;
   };
   legend.addTo(myMap);
 });
-
-
-// var earthquake = new L.LayerGroup();
-
-
-
-// function createFeatures (usgsdata) {
-
-//   function perFeature (feature, layer) {
-//     layer.bindPopup(`<h3>${feature.properties.place}</h3><hr><p>${new Date(feature.properties.time)}</p>`);
-//   }
-
-//   var earthquake = L.geoJSON(usgsdata, {
-//     perFeature: perFeature
-//   });
-
-//   createMap (earthquake);
-// }
-
-// var layer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-//     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-// });
-
-// var overlay = {
-//   Earthquakes = earthquake
-// };
-
-
-// // console.log("Map1");
-
-
-// // }).addTo(myMap);
-
-
-
-
-
-
-
-// // Include popups that provide additional information about the earthquake when a marker is clicked.
-
-
-
-
-// // Create a legend that will provide context for your map data.
